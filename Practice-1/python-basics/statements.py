@@ -1,0 +1,6 @@
+print("Python is fun!")
+print("Hello World!")
+print("Have a nice day.")
+print("Learning Python is fun!")
+print("Hello"); print("How are you?"); print("Bye bye!")
+print("Really!")
