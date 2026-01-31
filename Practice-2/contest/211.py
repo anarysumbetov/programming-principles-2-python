@@ -1,13 +1,13 @@
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-c = b[a[1]-1: a[2]]
+left = a[1]-1
+right = a[2]-1
 
-for i in range(len(c)):
-    b.pop(a[1]-1)
+while left < right:
+        b[left], b[right] = b[right], b[left] # In-place swap
+        left += 1
+        right -= 1
 
-for i in range(len(c)):
-    b.insert(a[1]-1, c[i])
-
-for i in range(len(b)):
+for i in range(a[0]):
     print(b[i], end=" ")
