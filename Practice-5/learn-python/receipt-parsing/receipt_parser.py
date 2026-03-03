@@ -1,6 +1,7 @@
 import re
 import json
-f = open("raw.txt", "rt", encoding="utf-8")
+
+f = open("raw.txt", "r", encoding="utf-8")
 text = f.read()
 
 patternNamePrice = r"\d+\.\n(?P<Name>.*)\n.*\n.*\n.*Стоимость\n(?P<Price>\d+.*)"
@@ -29,6 +30,12 @@ x = {
     "paymentMethod": paymentMethod 
 }
 
-print(json.dumps(x, indent=4))
+
+dump = json.dumps(x, ensure_ascii = False, indent=4).encode("UTF-8")
+
+print(dump.decode()) # it shows it in terminal json in any language of utf-8
+
+# with open('res.json','wb') as rf:
+#     rf.write(dump) # it shows it in a new file of res.json
 
 f.close()
