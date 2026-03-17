@@ -1,0 +1,2 @@
+# psycopg2 is uninstalled so this is the command:
+# python -m pip install psycopg2-binary
